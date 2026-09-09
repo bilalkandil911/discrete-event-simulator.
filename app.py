@@ -31,12 +31,17 @@ from tkinter import ttk, messagebox
 SCRIPT_DIR  = Path(__file__).parent.resolve()
 BRIDGE_PATH = SCRIPT_DIR / "simulator_bridge"
 if not BRIDGE_PATH.exists():
+<<<<<<< HEAD
     windows_bridge = BRIDGE_PATH.with_suffix(".exe")
     if windows_bridge.exists():
         BRIDGE_PATH = windows_bridge
     else:
         # Try same dir as script, then cwd
         BRIDGE_PATH = Path("simulator_bridge")
+=======
+    # Try same dir as script, then cwd
+    BRIDGE_PATH = Path("simulator_bridge")
+>>>>>>> e1f5eb8b328dec8e0806303d2cf47e140c52ac2d
 
 # ── Colour palette ───────────────────────────────────────────────────────────
 BG          = "#0f1117"
